@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Urban Population vs Shootings",
+    "data": {
+                "url": "https://raw.githubusercontent.com/ASAW0006/FIT3179/main/data_visualisation_2/data/Police_Shootings_(Clean).csv"
+            },
+"mark": "circle",
+            "encoding": {
+            "x": {
+            "field": "UrbanPop",
+            "type": "quantitative",
+            "title": "% Urban Population"
+            },
+            "y": {
+            "field": "Total",
+            "type": "quantitative",
+            "title" : "Total number of police shootings"
+            },
+            "size": {
+            "field": "Population",
+            "type": "quantitative"
+            }}}
