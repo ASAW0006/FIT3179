@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": "container",
     "height": 450,
     "title": "Police Shootings between 2015 and 2022 in the US",
     "layer" : [
