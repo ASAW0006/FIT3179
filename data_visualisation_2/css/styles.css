@@ -9,11 +9,11 @@ h1 {
 }
 
 body {
-    background-color: AntiqueWhite
+    background-color: lightgreen
 }
 
 .page {
-    width: 1000px;
+    width: 500px;
     background-color: white;
     margin: auto;
     padding-left: 50px;
@@ -51,8 +51,8 @@ h1 {
     font-size: 14px;
 }
 
-.txt-orangebold {
-    color: orange;
+.txt-greenbold {
+    color: green;
     font-weight: bolder;
 }
 
