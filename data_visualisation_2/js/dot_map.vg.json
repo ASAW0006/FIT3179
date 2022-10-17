@@ -6,7 +6,7 @@
 
     "vconcat": [
       {
-        "width": "container",
+        "width": 400,
         "title": "Police Shootings between 2015 and 2022",
         "mark": "area",
         "encoding": {
