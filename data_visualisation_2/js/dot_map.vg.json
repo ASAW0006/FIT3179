@@ -68,7 +68,7 @@
       
       {
         "width": "container",
-        "height": 450,
+        "height": "container",
         "projection" : {"type": "albersUsa"},
 
         "layer": [
