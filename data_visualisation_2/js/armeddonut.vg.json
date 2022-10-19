@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Armed",
   "width":"container",
   "data": {
     "values": [
@@ -14,10 +13,6 @@
       "encoding": {
         "theta": {"field": "value", "type": "quantitative"},
         "color": {"field": "category", "scale": {"range": ["#045a8d", "#f1eef6"]},"legend":null},
-        "tooltip":[
-          {"field":"value","type":"quantitative","title":"Proportion"},
-          {"field":"category", "type": "nominal","title":"Likelihood to Report"}
-        ]
       }
     },
     {
