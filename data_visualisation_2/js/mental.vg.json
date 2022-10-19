@@ -4,8 +4,8 @@
   "width":"container",
   "data": {
     "values": [
-      {"category": "Signs of Mental Illness", "value": 0.79},
-      {"category": "No Signs of Mental Illness", "value": 0.21}
+      {"category": "Signs of Mental Illness", "value": 0.06},
+      {"category": "No Signs of Mental Illness", "value": 0.94}
     ]
   },
   "layer":[
@@ -17,11 +17,11 @@
       }
     },
     {
-      "mark": {"type": "text", "text": "21.2%", "fontSize": 40},
+      "mark": {"type": "text", "text": "6.1%", "fontSize": 40},
       "encoding": {"color": {"value": "black"}}
     },
     {
-      "mark": {"type": "text", "text": "signs of mental illness", "dy":25},
+      "mark": {"type": "text", "text": "unarmed", "dy":25},
       "encoding": {"color": {"value": "black"}}
     }
   ]
