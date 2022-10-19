@@ -3,7 +3,6 @@
   "config": {"view": {"stroke": null}},
     "width": "container",
     "height": 450,
-    "title": "Urban Population vs Shootings",
     "data": {
                 "url": "https://raw.githubusercontent.com/ASAW0006/FIT3179/main/data_visualisation_2/data/Police_Shootings_(Clean).csv"
             },
