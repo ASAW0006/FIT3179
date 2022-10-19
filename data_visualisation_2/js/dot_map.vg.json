@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "config": {"view": {"stroke": null}},
     "data": {
       "url": "https://raw.githubusercontent.com/ASAW0006/FIT3179/main/data_visualisation_2/data/US%20Police%20shootings%202015-22.csv"
     },
@@ -99,7 +100,7 @@
       ]  
 }]},
 {
-  "width": 1150,
+  "width": 1000,
   "height": 80,
   "layer" : [
     {
