@@ -101,6 +101,9 @@
 {
   "width": 1000,
   "height": 60,
+  "layer" : [
+    {
+  
   "mark": "line",
   "title": "Select data from a range of time using this line chart",
   "params": [
@@ -122,7 +125,36 @@
       "title": "Count"
     }
   }
+},
+{
+  "transform": [
+    {"calculate": "'Death of George Floyd'", "as" : "text_annotation"}
+  ],
+"mark": {
+"type": "text",
+"align": "right",
+"baseline": "middle",
+"dx": 320,
+"fontStyle": "italic"
+},
+"encoding": {
+"text": {"field": "text_annotation"},
+"color": {"value": "black"},
+"tooltip": [
+{"field": "Country", "type": "nominal"},
+{"field": "Confirmed", "type": "quantitative", "format": ","},
+{"field": "Active", "type": "quantitative", "format": ","},
+{"field": "Deaths", "type": "quantitative", "format": ","},
+{"field": "Recovered", "type": "quantitative", "format": ","},
+{
+"field": "Cases per 10,000 Population",
+"type": "quantitative",
+"format": ".2f"
 }
+]
+}
+
+}]}
 ]
       
 }
