@@ -1,24 +1,44 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"view": {"stroke": null}},
     "width": 800,
     "height": 450,
     "title": "Urban Population vs Shootings",
     "data": {
                 "url": "https://raw.githubusercontent.com/ASAW0006/FIT3179/main/data_visualisation_2/data/Police_Shootings_(Clean).csv"
             },
-"mark": "circle",
+        "transform": [
+            {"calculate": "(datum.Total + 0.1)/datum.Population*100000", "as": "Shootings per 100000 people"}
+        ],
+"mark": {"type": "circle", "clip":true},
             "encoding": {
             "x": {
-            "field": "UrbanPop",
+            "field": "Murder",
             "type": "quantitative",
-            "title": "% Urban Population"
+            "title": "Murders per 100000 people",
+            "axis": {"grid": false, "tickCount": 10}
             },
             "y": {
-            "field": "Total",
+            "field": "Shootings per 100000 people",
             "type": "quantitative",
-            "title" : "Total number of police shootings"
+            "title" : "Shootings per 100000 people",
+            "axis": {"grid": false, "tickCount": 10},
+            "scale": {"domain":[0,60]}
             },
             "size": {
+            "value" : 50,
             "field": "Population",
             "type": "quantitative"
-            }}}
+            },
+            "color" :{
+                "field": "UrbanPop",
+                "type": "quantitative",
+                "title" : "% Urban Population"
+            },
+            "tooltip": [
+                {"field": "State"},
+                {"field": "Population"},
+                {"field": "UrbanPop", "title": "% Urban Population"},
+                {"field": "Shootings per 100000 people", "title": "Shootings per 100000", "format": ".2f"},
+                {"field": "Murder", "title": "Murders per 100000"}
+            ]}}
