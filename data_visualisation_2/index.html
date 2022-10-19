@@ -42,7 +42,7 @@
     <!-- HEADING -->
     <div class="pure-g">
       <div class="pure-u-1-1 description-center center round">
-        <h2>Shootings by State</h2>
+        <h2>Shootings vs State</h2>
       </div>
     </div>
 
@@ -55,7 +55,15 @@
                 <br> determine if there is a relationship between race
                 <br> and police shootings
             </p>
-            <div id="vis1", class="vis-container"></div>
+            <div id="vis2", class="vis-container"></div>
+  
+      <!-- HEADING -->
+    <div class="pure-g">
+      <div class="pure-u-1-1 description-center center round">
+        <h2>Shootings vs Race</h2>
+      </div>
+    </div>
+  
             <h2>World Temperature and CO2 Emissions Comparison</h2>
             <p>The data displayed below compares the average Temperature (Celsius) 
                 <br> to CO2 Emissions (Tonnes) from 1900 until 2013, to provide insight to 
@@ -63,7 +71,7 @@
                 <br> rising global temperatures and climate change.
             </p>
             <p id="prompt">---Highlight an area on either graph below to restrict the time interval---</p>
-            <div id="vis2", class="vis-container"></div>
+            <div id="vis1", class="vis-container"></div>
             <h2>Energy Mix of the World</h2>
             <p>So which energy sources make up the worlds energy?
                 <br>As of 2019 most of our worlds energy is produced
@@ -89,6 +97,8 @@
  var specVis2 = "js/white.vg.json";
 
  var specVis3 = "js/shooting_vs_urban.vg.json";
+    
+ var specVis4 = "js/percentages.vg.json"; 
 
  vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
 
@@ -108,6 +118,12 @@
 
  }).catch(console.error);
 
+ vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+
+ // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+ }).catch(console.error);
+    
  </script>
 </body>
 
