@@ -4,8 +4,8 @@
   "width":"container",
   "data": {
     "values": [
-      {"category": "Signs of Mental Illness", "value": 0.06},
-      {"category": "No Signs of Mental Illness", "value": 0.94}
+      {"category": "Signs of Mental Illness", "value": 0.94},
+      {"category": "No Signs of Mental Illness", "value": 0.06}
     ]
   },
   "layer":[
