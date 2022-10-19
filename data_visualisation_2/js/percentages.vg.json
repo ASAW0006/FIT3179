@@ -103,7 +103,7 @@
             "type": "bar",
             "yOffset": 10,
             "size": 20,
-            "color": "darkblue"
+            "color": "#045a8d"
           },
           "encoding": {
             "x": {
