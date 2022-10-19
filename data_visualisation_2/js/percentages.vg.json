@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"view": {"stroke": null}},
+  "data": {"values": [
+      {"year": 2015, "race": "White", "pop": 59.1, "victim": 51.2}, 
+      {"year": 2015, "race": "Hispanic", "pop": 19.1, "victim": 17.3},
+      {"year": 2015, "race": "Black", "pop": 12.4, "victim": 27.27}, 
+      {"year": 2015, "race": "Native American", "pop": 0.8, "victim": 1.37}, 
+      {"year": 2015, "race": "Other", "pop": 2.9, "victim": 0.78}, 
+      {"year": 2015, "race": "Asian", "pop": 6.1, "victim": 2.08},
+      {"year": 2016, "race": "White", "pop": 59, "victim": 51.8}, 
+      {"year": 2016,"race": "Hispanic", "pop": 19.2, "victim": 17.4},
+      {"year": 2016,"race": "Black", "pop": 12.4, "victim": 28}, 
+      {"year": 2016,"race": "Native American", "pop": 0.8, "victim": 1.4}, 
+      {"year": 2016,"race": "Other", "pop": 2.9, "victim": 0.36}, 
+      {"year": 2016,"race": "Asian", "pop": 6.3, "victim": 1.7},
+      {"year": 2017,"race": "White", "pop": 58.9, "victim": 50.3}, 
+      {"year": 2017,"race": "Hispanic", "pop": 19.3, "victim": 17},
+      {"year": 2017,"race": "Black", "pop": 12.7, "victim": 23}, 
+      {"year": 2017,"race": "Native American", "pop": 0.8, "victim": 1.5}, 
+      {"year": 2017,"race": "Other", "pop": 2.9, "victim": 0.6}, 
+      {"year": 2017,"race": "Asian", "pop": 6.2, "victim": 1.7},
+      {"year": 2018,"race": "White", "pop": 58.1, "victim": 54}, 
+      {"year": 2018,"race": "Hispanic", "pop": 19.4, "victim": 17.9},
+      {"year": 2018,"race": "Black", "pop": 12.1, "victim": 25.4}, 
+      {"year": 2018,"race": "Native American", "pop": 0.8, "victim": 1.1}, 
+      {"year": 2018,"race": "Other", "pop": 2.9, "victim": 0.9}, 
+      {"year": 2018,"race": "Asian", "pop": 6.5, "victim": 3.8},
+      {"year": 2019,"race": "White", "pop": 58.6, "victim": 48}, 
+      {"year": 2019,"race": "Hispanic", "pop": 19.5, "victim": 19},
+      {"year": 2019,"race": "Black", "pop": 12.9, "victim": 26.9}, 
+      {"year": 2019,"race": "Native American", "pop": 0.8, "victim": 1.2}, 
+      {"year": 2019,"race": "Other", "pop": 2.9, "victim": 0.2}, 
+      {"year": 2019,"race": "Asian", "pop": 6.4, "victim": 2.1},
+      {"year": 2020,"race": "White", "pop": 58.5, "victim": 52.3}, 
+      {"year": 2020,"race": "Hispanic", "pop": 19.6, "victim": 11},
+      {"year": 2020,"race": "Black", "pop": 13, "victim": 30.81}, 
+      {"year": 2020,"race": "Native American", "pop": 0.8, "victim": 1.4}, 
+      {"year": 2020,"race": "Other", "pop": 2.9, "victim": 0.73}, 
+      {"year": 2020,"race": "Asian", "pop": 6.6, "victim": 2.6},
+      {"year": 2021,"race": "White", "pop": 58.4, "victim": 51.2}, 
+      {"year": 2021,"race": "Hispanic", "pop": 19.7, "victim": 13.9},
+      {"year": 2021,"race": "Black", "pop": 12.5, "victim": 29.6}, 
+      {"year": 2021,"race": "Native American", "pop": 0.8, "victim": 1.37}, 
+      {"year": 2021,"race": "Other", "pop": 2.9, "victim": 0.85}, 
+      {"year": 2021,"race": "Asian", "pop": 6.5, "victim": 2.08},
+      {"year": 2022,"race": "White", "pop": 58.2, "victim": 51.5}, 
+      {"year": 2022,"race": "Hispanic", "pop": 19.8, "victim": 17.3},
+      {"year": 2022,"race": "Black", "pop": 12.5, "victim": 27.27}, 
+      {"year": 2022,"race": "Native American", "pop": 0.8, "victim": 1.32}, 
+      {"year": 2022,"race": "Other", "pop": 2.9, "victim": 0.69}, 
+      {"year": 2022,"race": "Asian", "pop": 6.7, "victim": 2.08}
+    ]
+  },
+  "params" :[
+    {
+      "name":"Year_selection",
+      "value": 2015,
+"bind": {
+"input": "range",
+"min": 2015,
+"max": 2022,
+"step": 1,
+"name": "Year: "
+}
+
+    }
+  ],
+  "transform": [
+    {"filter": "datum.year == Year_selection"}
+  ],
+      "title": "Race as a % of population vs as % of police shootings",
+      "width": 500,
+      "height": 350,
+      "encoding": {
+        "y": {
+          "field": "race",
+          "type": "nominal",
+          "axis": {"grid": false, "labelAngle": 0},
+          "title": "Race"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "yOffset": -10,
+            "size": 20,
+            "color": "lightgrey"
+          },
+          "encoding": {
+            "x": {
+              "field": "pop",
+              "type": "quantitative",
+              "title": "",
+              "axis": {"grid": false}
+            },
+            "tooltip": [{"field": "pop", "title": "% in Population"}]
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "yOffset": 10,
+            "size": 20,
+            "color": "darkred"
+          },
+          "encoding": {
+            "x": {
+              "field": "victim",
+              "type": "quantitative",
+              "title": "Percent %"
+            },
+            "tooltip": [
+              {
+                "field": "victim",
+                "format": ".2f",
+                "title": "% of Victims"
+              }
+            ]
+          }
+        }
+      ]
+}
