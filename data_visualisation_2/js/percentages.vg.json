@@ -70,7 +70,7 @@
     {"filter": "datum.year == Year_selection"}
   ],
       "title": "Race as a % of population vs as % of police shootings",
-      "width": 500,
+      "width": "container",
       "height": 350,
       "encoding": {
         "y": {
