@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Armed",
+  "width":"container",
+  "data": {
+    "values": [
+      {"category": "Armed", "value": 0.06},
+      {"category": "Unarmed", "value": 0.94}
+    ]
+  },
+  "layer":[
+    {
+      "mark": {"type": "arc", "innerRadius": 55},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative"},
+        "color": {"field": "category", "scale": {"range": ["#045a8d", "#f1eef6"]},"legend":null},
+        "tooltip":[
+          {"field":"value","type":"quantitative","title":"Proportion"},
+          {"field":"category", "type": "nominal","title":"Likelihood to Report"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "text": "6.1%", "fontSize": 40},
+      "encoding": {"color": {"value": "black"}}
+    },
+    {
+      "mark": {"type": "text", "text": "unarmed", "dy":25},
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+}
