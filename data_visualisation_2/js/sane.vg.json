@@ -21,7 +21,7 @@
       "encoding": {"color": {"value": "black"}}
     },
     {
-      "mark": {"type": "text", "text": "signs of mental illness", "dy":25},
+      "mark": {"type": "text", "text": "showed signs of mental illness", "dy":25},
       "encoding": {"color": {"value": "black"}}
     }
   ]
