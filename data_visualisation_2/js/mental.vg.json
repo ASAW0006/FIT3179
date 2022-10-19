@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":"container",
+  "data": {
+    "values": [
+      {"category": "Signs of Mental Illness", "value": 0.79},
+      {"category": "No Signs of Mental Illness", "value": 0.21}
+    ]
+  },
+  "layer":[
+    {
+      "mark": {"type": "arc", "innerRadius": 55},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative"},
+        "color": {"field": "category", "scale": {"range": ["#045a8d", "#f1eef6"]},"legend":null}
+      }
+    },
+    {
+      "mark": {"type": "text", "text": "21.2%", "fontSize": 40},
+      "encoding": {"color": {"value": "black"}}
+    },
+    {
+      "mark": {"type": "text", "text": "signs of mental illness", "dy":25},
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+}
