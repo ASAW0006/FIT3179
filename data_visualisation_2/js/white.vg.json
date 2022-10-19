@@ -8,7 +8,7 @@
 
     "vconcat": [
       {
-      "width": "container",
+      "width": 450,
       "height": 450,
       "projection": {"type": "albersUsa"},
     "layer" : [
