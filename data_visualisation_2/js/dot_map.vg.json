@@ -6,8 +6,11 @@
 
     "vconcat": [
       {
-        "width": "container",
-        "title": "Police Shootings between 2015 and 2022",
+        "hconcat":[
+
+        {
+        "width": 500,
+        "height": 300,
         "mark": "area",
         "encoding": {
           "x": {
@@ -39,36 +42,10 @@
           }
         }
       },
-
-      {
-        "width": "container",
-        "height": 60,
-        "mark": "line",
-        "title": "Select data from a range of time using this line chart",
-        "params": [
-          {
-            "name": "time_brush",
-            "select": {"type": "interval", "encodings": ["x"]}
-          }
-        ],
-        "encoding": {
-          "x": {
-            "field": "date",
-            "timeUnit": "yearmonth",
-            "axis": {"title": "", "format": "%Y", "tickCount" : 8}
-          },
-          "y": {
-            "aggregate": "count",
-            "axis": {"tickCount": 3, "grid": false},
-            "scale" : {"domain": [0,50]},
-            "title": "Count"
-          }
-        }
-      },
       
       {
-        "width": "container",
-        "height": 375,
+        "width": 500,
+        "height": 300,
         "projection" : {"type": "albersUsa"},
 
         "layer": [
@@ -120,8 +97,32 @@
         ]}
               
       ]  
+}]},
+{
+  "width": 1000,
+  "height": 60,
+  "mark": "line",
+  "title": "Select data from a range of time using this line chart",
+  "params": [
+    {
+      "name": "time_brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "timeUnit": "yearmonth",
+      "axis": {"title": "", "format": "%Y", "tickCount" : 8}
+    },
+    "y": {
+      "aggregate": "count",
+      "axis": {"tickCount": 3, "grid": false},
+      "scale" : {"domain": [0,50]},
+      "title": "Count"
+    }
+  }
 }
-],
-"config": {"title": {"font": "sans-serif", "fontSize": 20}}
+]
       
 }
